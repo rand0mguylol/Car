@@ -1,0 +1,6 @@
+RENTEDCARID     STATUS       CARID     CUSTOMERID     BOOKEDDATE              PICKUPDATE              DROPOFFDATE             PAYMENTSTATUS     PAYMENTPERIOD     
+RC1             INUSE        CA1       CU1            2020/03/03 08:00:00     2020/03/05 10:00:00     2020/03/08 10:00:00     PAID              3 DAYS            
+RC2             BOOKED       CA2       CU2            2020/03/03 10:30:45     2020/03/05 11:00:00     2020/03/10 14:00:00     PAID              5 DAYS            
+RC3             RETURNED     CA3       CU3            2020/03/03 13:00:00     2020/03/05 12:00:00     2020/03/15 16:00:00     PAID              10 DAYS           
+RC4             PICKUP       CA4       CU4            2020/03/03 14:00:45     2020/03/05 13:00:00     2020/03/18 17:00:00     PAID              13 DAYS           
+RC5             BOOKED       CA5       CU5            2020/03/03 16:00:00     2020/03/05 14:00:00     2020/03/25 18:00:00     PENDING           20 DAYS           

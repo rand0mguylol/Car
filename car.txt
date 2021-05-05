@@ -1,0 +1,6 @@
+CARID     MAKER       MODEL     SEATS     CLASS          PLATENUMBER     PRICE/HOUR     ISAVAILABLE     
+CA1       PROTON      SAGA      5         SEDAN          WWF3888         15             TRUE            
+CA2       TOYOTA      CAMRY     5         SEDAN          MCU1234         20             TRUE            
+CA3       HONDA       JAZZ      5         SUBCOMPACT     AKU6969         15             FALSE           
+CA4       PERODUA     MYVI      5         SUBCOMPACT     WF0420          15             FALSE           
+CA5       TOYOTA      VIOS      5         COMPACT        ABC1234         12             TRUE            

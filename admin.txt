@@ -1,0 +1,5 @@
+ADMINID     EMAIL                PASSWORD      CONTACT         FIRSTNAME     LASTNAME          
+AD1         zxtey@gmail.com      iam@dmin1     0123886969      TEY           ZHU XUAN          
+AD2         hhho@gmail.com       iam@dmin2     0174201269      HO            HEE HONG          
+AD3         lllim@gmail.com      iam@dmin3     01133886938     LIM           LIN LING          
+AD4         sssong@gmail.com     iam@dmin4     0162735656      SONG          SHU SHO           
