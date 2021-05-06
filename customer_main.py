@@ -1,3 +1,4 @@
+from input_formatting import input_formatting
 from option_validation import option_validation
 from main import available_cars
 from fucntion_validation import function_validation
@@ -11,6 +12,11 @@ def customer_main():
   
 
   function_validation(customer_function, text)
+  exit_text = "Press 1 to exit"
+  exit_option = option_validation(1, 1, exit_text)
+  if exit_option == 1:
+    customer_main()
+
 
 
 def register_customer_account():
@@ -21,9 +27,10 @@ def register_customer_account():
     user_list.append(f"CU{len(total_lines)}")
     customer_details_list = ["Email: ", "Password: ", "Contact: ", "First Name: ", "Last Name: ", "Date of Birth (yyyy/mm/dd): ", "Address Line: ", "City: ", "State: ", "Postcode: "]
     for details in customer_details_list:
-      user_list.append(input(f"{details}").strip())    
+      user_input = input(f"{details}") 
+      user_list.append(input_formatting(user_input))
 
-  user_list.append("TRUE")
+  user_list.append("FALSE")
   user_list.append("TRUE")
     
   file_list.append(user_list)
@@ -31,10 +38,7 @@ def register_customer_account():
   
   pretty_table("customer.txt", file_list)
   
-  exit_text = "Press 1 to exit"
-  exit_option = option_validation(1, 1, exit_text)
-  if int(exit_option) == 1:
-    customer_main()
+
 
     
 def login_customer_account():
@@ -46,21 +50,14 @@ def login_customer_account():
 
   if is_login == True:
     print("Login Successful")
-  elif is_login == False:
-    print("\nEnter 0 to retry. Enter 1 to exit")
-    user_option = input("Please choose an option: ")
-    print("")
-    while not user_option.isdigit() or not 0 <= int(user_option) <= 1:
-      print("\nPlease enter a valid option\n")
-      print("Enter 0 to retry. Enter 1 to exit")
-      user_option = input("Please choose an option: ")
-      print("")
-        
-  
-    user_option = int(user_option)
+  elif is_login == False:   
+    text =  "Enter 0 to retry. Enter 1 to exit"
+    user_option = option_validation(0, 1, text)
     if user_option == 0:
       login_customer_account()
     else:
       customer_main()
+
+
 
 customer_main()

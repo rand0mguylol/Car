@@ -56,9 +56,11 @@ def car_status(filename, status, displaycar = False, displaycustomer = False):
     pretty_table_display(car_list, 7)
   if displaycustomer == True:
     pretty_table_display(customer_list, 2)
+  
+  print(car_id_list)
 
 
-car_status("rentedcar.txt", "RENTED", True, True)
+car_status("rentedcar.txt", "BOOKED", True, True)
 
 
 # def seraching(filename, column, specific_info, displaycar = False, displaycustomer = False):

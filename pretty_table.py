@@ -73,3 +73,4 @@ def pretty_table_display(file_list, column_index = None):
 
 
 
+pretty_table_display("car.txt")

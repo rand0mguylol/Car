@@ -19,4 +19,5 @@ def function_validation(function_list, text = None):
   
   option = int(option)
   function_list[option - 1]()
+  return int(option)
 

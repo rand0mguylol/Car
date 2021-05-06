@@ -48,7 +48,7 @@ def login_validation(filename, id, email, password):
 
     
   if id_exist == False:
-      print("ID does not exist")
+      print("ID does not exist\n")
       return False
 
   if email == admin_info_list[1] and password == admin_info_list[2]:
