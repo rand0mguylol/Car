@@ -1,4 +1,5 @@
-from format_file_list import format_file_list
+# from format_file_list import format_file_list
+
 # Integrates wirh format_file_list
 # The file_list parameter accepts a list of list
 # format_file_list returns a a list of list
@@ -72,5 +73,5 @@ def pretty_table_display(file_list, column_index = None):
 
 
 
-
-pretty_table_display("car.txt")
+# a = format_file_list("car.txt")
+# pretty_table_display(a)

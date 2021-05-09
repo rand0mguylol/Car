@@ -1,18 +1,10 @@
-# text = "3"
+def input_formatting(user_input):
+  if user_input == "":
 
-# text = text.split()
-# text = " ".join(text)
+    user_input_list = user_input.split()
+    user_input = " ".join(user_input_list)
 
-# print(text)
-
-
-# def input_formatting(user_input, t_list):
-#   if user_input == "":
-
-#   user_input_list = user_input.split()
-#   user_input = " ".join(user_input_list)
-
-#   return user_input
+  return user_input
 
 
 

@@ -1,5 +1,5 @@
 
-from login_validation import login_validation
+from public_functions.login_validation import login_validation
 
 
 def admin_login():

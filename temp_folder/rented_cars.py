@@ -1,6 +1,4 @@
-from format_file_list import format_file_list
-from pretty_table import pretty_table_display
-
+from ....PWP2.parent.public_functions.format_file_list import format_file_list
 
 
 # Returns details on cars that have been rented out, details of the respective cars, the customer details who rented car.
