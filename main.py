@@ -50,7 +50,7 @@ def add_cars(file_name):
 
 
 def available_cars():
-  isavailable_index = 7
+  isavailable_index = 8
   details_list = []
 
   file_list = format_file_list("car.txt")
@@ -58,15 +58,14 @@ def available_cars():
 
   details_list.append(header)
 
-
   for row in file_list:
     if row[isavailable_index] == "TRUE":
       details_list.append(row)
 
-  pretty_table_display(details_list, 1)
+  pretty_table_display(details_list, [isavailable_index])
+
 
        
-# available_cars("car.txt", 1)
 
 
 

@@ -2,22 +2,34 @@
 # It also ensures the user selects only the options displayed on the screen and not any invalid data
 
 
-def function_validation(function_list, text = None):
-  option = None
+def function_validation(function_list, text = None, customer_id = None):
 
-  while option == None:
-    if text == None:
-      pass
-    else:
+  if text != None:
+    print(text)
+
+  option = input("Please choose an option by entering a number: ")
+  print("")
+
+  while not option.isdigit() or not 0 < int(option) <= len(function_list):
+    print("Please enter a valid option\n")
+    
+    if text != None:
       print(text)
+
     option = input("Please choose an option by entering a number: ")
     print("")
-    while not option.isdigit() or not 0 < int(option) <= len(function_list):
-      option = None
-      print("Please enter a valid option\n")
 
   
   option = int(option)
-  function_list[option - 1]()
-  return int(option)
+  
+  if customer_id == None:
+    function_list[option - 1]()
+  else:
+    function_list[option - 1](customer_id)
+
+
+
+
+
+
 

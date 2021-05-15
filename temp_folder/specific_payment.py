@@ -1,7 +1,7 @@
-from public_functions.pretty_table import pretty_table_display
-from public_functions.format_file_list import format_file_list
-from public_functions.option_validation import option_validation
-
+from pretty_table import pretty_table_display
+from format_file_list import format_file_list
+from option_validation import option_validation
+from get_id import get_id_info
 
 def filter_payment(filename):
   payment_period_column = 8
@@ -39,27 +39,14 @@ def filter_payment(filename):
       time_number = row[payment_period_column].split(f" {time_filter}") # time_number is a list
       if time_duration in time_number: 
         details_list.append(row)
-        car_id_list.append(row[car_id_index])
-        customer_id_list.append(row[customer_id_index])
-  
-  car_file_list = format_file_list("car.txt")
-  car_list.append(car_file_list[0]) # Append header
-  for row in car_file_list:
-    for id in car_id_list:
-      if row[0] == id:
-        car_list.append(row)
+        car_id_list.append(row[car_id_index]) if row[car_id_index] not in car_id_list else False
+        customer_id_list.append(row[customer_id_index]) if row[customer_id_index] not in customer_id_list else False
+ 
 
-  customer_file_list = format_file_list("customer.txt")
-  customer_list.append(customer_file_list[0]) # Append header
-  for row in customer_file_list:
-    for id in customer_id_list:
-      if row[0] == id:
-        customer_list.append(row)
+  car_list = get_id_info("car.txt", car_id_list)
+  customer_list = get_id_info("customer.txt", customer_id_list)
   
   pretty_table_display(details_list)
-  pretty_table_display(car_list, 7)
-  pretty_table_display(customer_list, 2)
-
-
-filter_payment("rentedcar.txt")
+  pretty_table_display(car_list, [7])
+  pretty_table_display(customer_list, [2])
 

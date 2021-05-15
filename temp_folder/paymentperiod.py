@@ -1,6 +1,6 @@
 import datetime
-from pretty_table import pretty_table
-from format_file_list import format_file_list
+# from pretty_table import pretty_table
+# from format_file_list import format_file_list
 
 
 # def payment_period():
@@ -23,32 +23,47 @@ from format_file_list import format_file_list
 
 # test_list = format_file_list("rentedcar2.txt")
 
-def payment_period(rented_car_list):
+# def payment_period(rented_car_list):
 
-    start_point = 1
+#     start_point = 1
 
-    while start_point < len(rented_car_list):
-      for col in range(len(rented_car_list[start_point])):
-        pick_date = rented_car_list[start_point][5]
-        drop_date = rented_car_list[start_point][6]
-        pick_date_string = datetime.datetime.strptime(pick_date, "%Y/%m/%d %H:%M:%S")
-        drop_date_string = datetime.datetime.strptime(drop_date, "%Y/%m/%d %H:%M:%S")
-        payment_status = drop_date_string - pick_date_string
+#     while start_point < len(rented_car_list):
+#       for col in range(len(rented_car_list[start_point])):
+#         pick_date = rented_car_list[start_point][5]
+#         drop_date = rented_car_list[start_point][6]
+#         pick_date_string = datetime.datetime.strptime(pick_date, "%Y/%m/%d %H:%M:%S")
+#         drop_date_string = datetime.datetime.strptime(drop_date, "%Y/%m/%d %H:%M:%S")
+#         payment_status = drop_date_string - pick_date_string
         
-        return payment_status
-        # if int(payment_status.total_seconds()/3600) >= 24:
-        #   print(f"{payment_status.days} days")
-        #   rented_car_list[start_point].append(f"{payment_status.days} DAYS")
-        #   break
-        # else:
-        #   print(f"{int(payment_status.seconds/3600)} hours")
-        #   rented_car_list[start_point].append(f"{int(payment_status.seconds/3600)} HOURS")
-        #   break
+#         return payment_status
+#         # if int(payment_status.total_seconds()/3600) >= 24:
+#         #   print(f"{payment_status.days} days")
+#         #   rented_car_list[start_point].append(f"{payment_status.days} DAYS")
+#         #   break
+#         # else:
+#         #   print(f"{int(payment_status.seconds/3600)} hours")
+#         #   rented_car_list[start_point].append(f"{int(payment_status.seconds/3600)} HOURS")
+#         #   break
       
-      start_point += 1
+#       start_point += 1
       
 
 
-  print(file_list)
+#   print(file_list)
 
 
+
+def payment_period(start_date, end_date):
+
+    payment_status = end_date - start_date
+
+
+    convert_hours = payment_status.total_seconds()/3600
+    if convert_hours >= 24:
+      return (f"{payment_status.days} DAYS")
+    else:
+        if convert_hours < 1:
+            return (f"{convert_hours:.1f} HOURS")
+        elif convert_hours >= 1:
+            return (f"{int(convert_hours)} HOURS")
+      

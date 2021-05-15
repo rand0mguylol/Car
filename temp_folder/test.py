@@ -1,5 +1,5 @@
-import datetime
-from format_file_list import format_file_list
+# import datetime
+# from format_file_list import format_file_list
 # with open("test.txt", "a") as rf:
 #   rf.write("test")
   
@@ -31,14 +31,44 @@ from format_file_list import format_file_list
 
 
 
-['CA3', 'HONDA', 'JAZZ', '5', 'SUBCOMPACT', 'AKU6969', '15', 'FALSE'], 
+# ['CA3', 'HONDA', 'JAZZ', '5', 'SUBCOMPACT', 'AKU6969', '15', 'FALSE'], 
 
 
 
 
 
-['CA4', 'PERODUA', 'MYVI', '5', 'SUBCOMPACT', 'WF0420', '15', 'FALSE'], 
+# ['CA4', 'PERODUA', 'MYVI', '5', 'SUBCOMPACT', 'WF0420', '15', 'FALSE'], 
 
 
 
-['CA5', 'TOYOTA', 'VIOS', '5', 'COMPACT', 'ABC1234', '12', 'TRUE']]
+# ['CA5', 'TOYOTA', 'VIOS', '5', 'COMPACT', 'ABC1234', '12', 'TRUE']]
+
+
+
+# test_list = []
+# a = 1
+
+# def test_function():
+#   test_list.append(1)
+#   test_list.append(2)
+#   a = 2
+
+# test_function()
+# print(test_list)
+# print(a)
+
+# def bookings():
+#   test = [[1,2,3], [4,5,6]]
+#   return test
+
+# gene = [bookings()]
+# print(gene)
+
+
+
+word = "y"
+
+if word == "test" or "lol":
+  print("yes")
+else:
+  print("no")

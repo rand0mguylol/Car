@@ -1,4 +1,5 @@
-from ....PWP2.parent.public_functions.format_file_list import format_file_list
+from format_file_list import format_file_list
+from pretty_table import pretty_table_display
 
 
 # Returns details on cars that have been rented out, details of the respective cars, the customer details who rented car.
@@ -58,7 +59,7 @@ def car_status(filename, status, displaycar = False, displaycustomer = False):
   print(car_id_list)
 
 
-car_status("rentedcar.txt", "BOOKED", True, True)
+# car_status("rentedcar.txt", "BOOKED", True, True)
 
 
 # def seraching(filename, column, specific_info, displaycar = False, displaycustomer = False):
